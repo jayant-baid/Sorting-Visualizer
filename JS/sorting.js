@@ -11,9 +11,9 @@ let RIGHT;
 
 if (dark) {
     SELECTED = "red";
-    SORTED = "#52b69a";
+    SORTED = "#55a630";
     UNSORTED = "#cbd5e1";
-    TEMPSORTED = "#55a630";
+    TEMPSORTED = "#52b69a";
     COMPARE = "#a47148";
     // Used only in Merge & Quick
     LEFT = "orange";
