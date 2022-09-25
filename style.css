@@ -1,0 +1,161 @@
+ @import url("https://fonts.googleapis.com/css2?family=Nunito&display=swap");
+
+ /* || RESET */
+ * {
+     margin: 0;
+     padding: 0;
+     box-sizing: border-box;
+ }
+
+ /* || VARIABLES */
+ :root {
+     /* COLORS */
+     --FONT-COLOR: #FFF;
+     --HEADER-BGCOLOR: #1e293b;
+     --HEADER-COLOR: #FFF;
+     --BGCOLOR: aliceblue;
+     --BUTTON-COLOR: #FFF;
+     --BUTTON-BGCOLOR: #1e293b;
+     --BUTTON-HOVER-BGCOLOR: #cbd5e1;
+     --BUTTON-HOVER-COLOR: #1e293b;
+     --BAR-COLOR: #1e293b;
+
+     /* BORDERS */
+     --BORDER: 2px solid #1e293b;
+     --BAR-BORDER: 1.25px solid aliceblue;
+     --BORDER-RADIUS: 5px;
+
+     --MARGIN: 1rem;
+
+     --RANGE-COLOR: #1e293b;
+     --RANGE-BORDER: 2px solid #1e293b;
+
+ }
+
+ @media (prefers-color-scheme: dark) {
+     :root {
+         --BGCOLOR: #181818;
+         --BAR-BORDER: 1.25px solid #1e293b;
+         --BAR-COLOR: #cbd5e1;
+         --FONT-COLOR: aliceblue;
+         --RANGE-COLOR: aliceblue;
+         --RANGE-BORDER: 2px solid aliceblue;
+     }
+ }
+
+ /* || UTILITY STYLES */
+ .nowrap {
+     white-space: nowrap;
+ }
+
+ /* || GENERAL STYLES */
+ body {
+     font: 1.5rem "Nunito", sans-serif;
+     background-color: var(--BGCOLOR);
+     min-height: 100vh;
+     display: flex;
+     flex-direction: column;
+ }
+
+ header,
+ footer {
+     background-color: var(--HEADER-BGCOLOR);
+     color: var(--HEADER-COLOR);
+     text-align: center;
+     padding: 0.5rem;
+     letter-spacing: 0.1em;
+ }
+
+ main {
+     flex-grow: 1;
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+     gap: 1.5rem;
+     padding: 1rem;
+ }
+
+ .control__button {
+     display: flex;
+     flex-direction: row;
+     flex-wrap: wrap;
+     place-content: center;
+     flex-grow: 1;
+
+ }
+
+ /* BUTTON & RANGE */
+ .control__range {
+     display: flex;
+     color: var(--RANGE-COLOR);
+     flex-wrap: wrap;
+     justify-content: center;
+     column-gap: 1rem;
+     font-weight: bold;
+ }
+
+ .range {
+     display: flex;
+     flex-flow: row;
+     color: var(--RANGE-COLOR);
+     justify-content: center;
+     align-items: center;
+ }
+
+ button {
+     background-color: var(--BUTTON-BGCOLOR);
+     border: var(--BORDER);
+     color: var(--BUTTON-COLOR);
+     padding: 0.5rem;
+     cursor: pointer;
+     font-size: 1.1rem;
+     border-radius: 10px;
+     margin: var(--MARGIN);
+ }
+
+
+ input {
+     cursor: pointer;
+     margin: var(--MARGIN);
+ }
+
+ button:hover,
+ button:focus {
+     background-color: var(--BUTTON-HOVER-BGCOLOR);
+     color: var(--BUTTON-HOVER-COLOR);
+     border: var(--BORDER);
+ }
+
+ #speed,
+ #size {
+     width: 15vw;
+ }
+
+ .rangevalue {
+     display: inline-block;
+     border: var(--RANGE-BORDER);
+     padding: 3px 10px;
+     border-radius: var(--BORDER-RADIUS);
+ }
+
+ /* BARS */
+ #bar {
+     display: flex;
+     justify-content: center;
+     align-items: flex-end;
+     min-width: 100%;
+     height: 100%;
+     flex-direction: row;
+     flex-grow: 1;
+     padding: 10px;
+     margin-bottom: var(--MARGIN);
+ }
+
+ .baritem {
+     background: var(--BAR-COLOR);
+     border: var(--BAR-BORDER);
+     width: 80%;
+     justify-items: center;
+     border-top-right-radius: var(--BORDER-RADIUS);
+     border-top-left-radius: var(--BORDER-RADIUS);
+ }
